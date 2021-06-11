@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.alex.dao.ProductMapper">
+
+    <resultMap id="BaseResultMap" type="com.alex.vo.ProductVO" >
+        <result column="product_Id" jdbcType="BIGINT" property="productId"></result>
+        <result column="product_name" jdbcType="VARCHAR" property="productName"></result>
+        <result column="product_price" jdbcType="DOUBLE" property="productPrice"></result>
+        <result column="stock" jdbcType="INTEGER" property="stock"></result>
+    </resultMap>
+    <select id="getProductByProductId" resultMap="BaseResultMap">
+        select *
+        from shop_product
+        where 1 = 1
+        and product_id = #{id,jdbcType=BIGINT}
+    </select>
+
+    <select id="getProductList" resultMap="BaseResultMap">
+        select * from shop_product;
+    </select>
+
+</mapper>

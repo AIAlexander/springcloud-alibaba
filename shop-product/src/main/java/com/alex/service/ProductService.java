@@ -1,6 +1,9 @@
 package com.alex.service;
 
 import com.alex.entity.Product;
+import com.alex.vo.ProductVO;
+
+import java.util.List;
 
 /**
  * @author wsh
@@ -8,5 +11,7 @@ import com.alex.entity.Product;
  */
 public interface ProductService {
 
-    Product findByProductId(Long productId);
+    ProductVO findByProductId(Long productId);
+
+    List<ProductVO> getProductList();
 }
