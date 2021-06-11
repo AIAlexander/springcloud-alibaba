@@ -1,6 +1,6 @@
 package com.alex.controller;
 
-import com.alex.entity.Product;
+import com.alex.constant.Response;
 import com.alex.service.ProductService;
 import com.alex.vo.ProductVO;
 import com.alibaba.fastjson.JSON;
@@ -26,11 +26,11 @@ public class ProductController {
     private ProductService productService;
 
     @GetMapping("{productId}")
-    public Product product(@PathVariable("productId") Long productId) {
+    public Response product(@PathVariable("productId") Long productId) {
         log.info("查询【productId：{}】的商品", productId);
-        Product product = productService.findByProductId(productId);
+        ProductVO product = productService.findByProductId(productId);
         log.info("查询成功，商品为：{}", JSON.toJSONString(product));
-        return product;
+        return Response.SUCCESS(product);
     }
 
     @GetMapping

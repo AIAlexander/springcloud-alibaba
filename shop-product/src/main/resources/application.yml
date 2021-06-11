@@ -28,6 +28,14 @@ spring:
     useGlobalDataSourceStat: true
     connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=500
     # 使用mybatis操作数据库配置以下内容
+
+  #微服务配置
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+
+
 mybatis:
   type-aliases-package: com.alex.dao #可以添加此属性
   # 指定全局配置文件位置

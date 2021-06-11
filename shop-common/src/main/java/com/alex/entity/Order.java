@@ -32,5 +32,5 @@ public class Order {
 
     private BigDecimal productPrice;
 
-    private Integer number;
+    private Integer orderNum;
 }
