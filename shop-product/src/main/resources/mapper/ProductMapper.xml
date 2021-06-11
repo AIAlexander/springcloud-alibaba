@@ -10,8 +10,19 @@
         <result column="product_price" jdbcType="DOUBLE" property="productPrice"></result>
         <result column="stock" jdbcType="INTEGER" property="stock"></result>
     </resultMap>
+
+    <sql id="InsertColumnClause">
+        product_name, product_price, stock
+    </sql>
+
+    <sql id="WhereClause">
+        <where>
+
+        </where>
+    </sql>
+
     <select id="getProductByProductId" resultMap="BaseResultMap">
-        select *
+        select product_id, <include refid="InsertColumnClause" />
         from shop_product
         where 1 = 1
         and product_id = #{id,jdbcType=BIGINT}
