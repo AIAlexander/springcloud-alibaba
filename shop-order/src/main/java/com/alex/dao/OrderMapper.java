@@ -3,6 +3,7 @@ package com.alex.dao;
 import com.alex.dto.OrderQueryDTO;
 import com.alex.entity.Order;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
@@ -14,5 +15,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface OrderMapper{
 
-    void insertOrder(OrderQueryDTO orderQueryDTO);
+    void insertOrder(@Param("orderQueryDTO") OrderQueryDTO orderQueryDTO);
 }

@@ -18,6 +18,8 @@ import java.math.BigDecimal;
 @AllArgsConstructor
 public class OrderQueryDTO {
 
+    private Long orderId;
+
     private Long userId;
 
     private String username;

@@ -1,5 +1,6 @@
 package com.alex.controller;
 
+import com.alex.api.ProductApi;
 import com.alex.constant.Response;
 import com.alex.service.ProductService;
 import com.alex.vo.ProductVO;
@@ -18,23 +19,22 @@ import java.util.List;
  * @date 2021-06-09
  */
 @RestController
-@RequestMapping("/product")
 @Slf4j
-public class ProductController {
+public class ProductController implements ProductApi {
 
     @Autowired
     private ProductService productService;
 
-    @GetMapping("{productId}")
-    public Response product(@PathVariable("productId") Long productId) {
+    @Override
+    public ProductVO product(@PathVariable("productId") Long productId) {
         log.info("查询【productId：{}】的商品", productId);
         ProductVO product = productService.findByProductId(productId);
         log.info("查询成功，商品为：{}", JSON.toJSONString(product));
-        return Response.SUCCESS(product);
+        return product;
     }
 
-    @GetMapping
-    public List<ProductVO> productVOList() {
-        return productService.getProductList();
+    @Override
+    public Response list() {
+        return Response.SUCCESS(productService.getProductList());
     }
 }

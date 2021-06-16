@@ -24,7 +24,7 @@
         </where>
     </sql>
 
-    <insert id="insertOrder">
+    <insert id="insertOrder" parameterType="com.alex.dto.OrderQueryDTO" useGeneratedKeys="true" keyProperty="orderQueryDTO.orderId">
         insert into shop_order
         (
             <include refid="InsertColumnClause" />

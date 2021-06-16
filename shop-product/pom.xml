@@ -19,6 +19,12 @@
             <artifactId>shop-common</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
+        <!--    引入接口包    -->
+        <dependency>
+            <groupId>com.alex</groupId>
+            <artifactId>shop-api</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
         <!--    Springboot web    -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
