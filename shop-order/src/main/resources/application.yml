@@ -32,7 +32,12 @@ spring:
     nacos:
       discovery:
         server-addr: 127.0.0.1:8848
-
+    sentinel:
+      transport:
+        # 用于控制台进行交流，随意指定
+        port: 9999
+        # 指定控制台的ip和端口
+        dashboard: localhost:8080
 
 
 # 使用mybatis操作数据库配置以下内容
