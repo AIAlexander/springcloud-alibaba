@@ -36,9 +36,12 @@ public class Response {
                 ResponseCode.SUCCESS.getMsg(), data);
     }
 
+    public static Response ERROR(int code, String msg) {
+        return new Response(code, msg);
+    }
+
     public static Response ERROR(String msg){
-        return new Response(ResponseCode.SERVER_ERROR.getCode(),
-                ResponseCode.SERVER_ERROR.getMsg());
+        return Response.ERROR(ResponseCode.SERVER_ERROR.getCode(), msg);
     }
 
     public static Response AUTHENTICATION_EXCEPTION(String msg){

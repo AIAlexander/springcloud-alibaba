@@ -10,7 +10,7 @@ import com.alex.constant.Response;
  */
 public class BusinessException extends RuntimeException{
 
-    private int code = Response.BUSINESS_ERROR_CODE;
+    private int code = -1;
 
     public BusinessException(int code, String msg){
         super(msg);

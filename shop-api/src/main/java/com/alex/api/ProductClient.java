@@ -19,7 +19,7 @@ import java.util.List;
 @FeignClient(value = "service-product")
 public interface ProductClient {
 
-    @GetMapping("{productId}")
+    @GetMapping(value = "/product/{productId}")
     ProductVO product(@PathVariable("productId") Long productId);
 
 }

@@ -13,7 +13,18 @@ public enum  ResponseCode {
     /**
      * 权限相关 1xx
      */
-    NO_AUTHENTICATION(100, "没有权限")
+    NO_AUTHENTICATION(100, "没有权限"),
+
+    /**
+     * Sentinel相关 2xxx
+     */
+    FLOW_EXCEPTION(2000, "接口被限流"),
+
+    DEGRADE_EXCEPTION(2001, "接口被降级"),
+
+    PARAM_FLOW_EXCEPTION(2002, "参数限流异常"),
+
+    AUTHORITY_EXCEPTION(2003, "接口被授权规则限流")
     ;
 
     int code;
