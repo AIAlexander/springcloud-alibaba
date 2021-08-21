@@ -42,6 +42,11 @@ spring:
         # 指定控制台的ip和端口
         dashboard: localhost:8080
 
+# 开启sentinel对feign的支持
+feign:
+  sentinel:
+    enabled: true
+
 mybatis:
   type-aliases-package: com.alex.dao #可以添加此属性
   # 指定全局配置文件位置

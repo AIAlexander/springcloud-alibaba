@@ -1,6 +1,6 @@
 package com.alex.service.impl;
 
-import com.alex.api.ProductClient;
+import com.alex.client.ProductClient;
 import com.alex.constant.Response;
 import com.alex.dao.OrderMapper;
 import com.alex.dto.OrderQueryDTO;

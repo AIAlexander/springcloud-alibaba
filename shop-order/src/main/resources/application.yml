@@ -40,6 +40,8 @@ spring:
         dashboard: localhost:8080
 
 
+
+
 # 使用mybatis操作数据库配置以下内容
 mybatis:
   type-aliases-package: com.alex.dao  #可以添加此属性
@@ -51,4 +53,6 @@ pagehelper:
   reasonable: true
 
 
-
+feign:
+  sentinel:
+    enabled: true
