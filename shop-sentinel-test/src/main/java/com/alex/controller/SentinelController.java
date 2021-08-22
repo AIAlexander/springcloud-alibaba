@@ -1,6 +1,7 @@
 package com.alex.controller;
 
 import com.alex.service.MessageService;
+import com.alibaba.csp.sentinel.annotation.SentinelResource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -25,6 +26,7 @@ public class SentinelController {
      * @return
      */
     @GetMapping("/message1")
+    @SentinelResource(value = "message1")
     public String message1() {
         return "message1";
     }

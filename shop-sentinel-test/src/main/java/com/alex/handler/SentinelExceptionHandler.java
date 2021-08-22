@@ -22,7 +22,6 @@ import java.io.PrintWriter;
  *
  * Sentinel异常处理
  */
-@Component
 public class SentinelExceptionHandler implements BlockExceptionHandler {
     @Override
     public void handle(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, BlockException e) throws Exception {

@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: service-product
+  cloud:
+    nacos:
+      config:
+        server-addr: 127.0.0.1:8848
+        file-extension: yml
+        namespace: c0e09982-0cdf-4c63-a4e2-33feddeb1398

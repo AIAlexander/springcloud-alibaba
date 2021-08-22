@@ -1,6 +1,5 @@
 package com.alex.controller;
 
-import com.alex.api.ProductClient;
 import com.alex.constant.Response;
 import com.alex.service.ProductService;
 import com.alex.vo.ProductVO;

@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: service-order
+  cloud:
+    nacos:
+      config:
+        server-addr: 127.0.0.1:8848
+        file-extension: yml
+        namespace: bcff0377-649a-4287-8675-f11733b6452a
